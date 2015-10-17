@@ -12,9 +12,16 @@ angular.module('testAppApp')
     $scope.viewType = 'columns';
 
     Persons.getAll(function(result){
-        console.log("result",result);
         $scope.persons = result.data;
         $scope.categories = result.categories;
-
+        $scope.getClass = function(category){
+            var classes = {
+                category1:"success",
+                category2:"info",
+                category3:"warning",
+                category4:"danger"
+            }
+            return classes[category];
+        }
     })
   }]);
