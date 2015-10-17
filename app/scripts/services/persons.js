@@ -10,7 +10,7 @@
 angular.module('testAppApp')
   .service('Persons', function ($http) {
         var cachedData;
-        function getData(callback){
+        function getData(callback,error){
             if(cachedData) {
                 callback(cachedData);
             } else {

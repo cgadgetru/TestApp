@@ -9,9 +9,10 @@
  */
 angular.module('testAppApp')
   .controller('ApplicationCtrl',['$scope','Persons', function ($scope,Persons) {
+    $scope.loading = true;
     $scope.viewType = 'columns';
-
     Persons.getAll(function(result){
+        $scope.loading = false;
         $scope.persons = result.data;
         $scope.categories = result.categories;
         $scope.getClass = function(category){
@@ -20,7 +21,7 @@ angular.module('testAppApp')
                 category2:"info",
                 category3:"warning",
                 category4:"danger"
-            }
+            };
             return classes[category];
         }
     })

@@ -3,6 +3,8 @@
 @import "category";
 @import "column-container";
 @import "columns";
+@import "bs-glyphicons";
+@import "preloader";
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -21,7 +23,14 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+.preloader-container{
+  min-height: 1000px;
+  position: relative;
+}
+.switcher{
+  top: 8px;
+  right: 8px;
+}
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
