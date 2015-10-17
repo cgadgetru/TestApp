@@ -17,7 +17,7 @@ angular.module('testAppApp')
                 $http.get('/persons').success(function(data){
                     var result = {
                         data:data,
-                        category:getCategory(data)
+                        categories:getCategory(data)
                     };
                     cachedData = result;
                     callback(result);

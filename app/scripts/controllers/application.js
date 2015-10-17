@@ -14,6 +14,7 @@ angular.module('testAppApp')
     Persons.getAll(function(result){
         console.log("result",result);
         $scope.persons = result.data;
+        $scope.categories = result.categories;
 
     })
   }]);

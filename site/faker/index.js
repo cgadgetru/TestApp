@@ -6,7 +6,7 @@ var randomCard = faker.helpers.createCard(); // random contact card containing m
 var fakePersons = generateFakePersons(30);
 
 function FakePerson(){
-    var categories = ['one','two','three','fore'];
+    var categories = ['one','two','three','four'];
     this.name = faker.name.findName();
     this.email = faker.internet.email();
     this.category = getRandomCategory(categories)
