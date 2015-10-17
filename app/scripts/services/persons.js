@@ -9,7 +9,26 @@
  */
 angular.module('testAppApp')
   .service('Persons', function ($http) {
-    this.get = function(){
-       return $http.get('/persons')
-    }
+        var cachedData;
+        function getData(callback){
+            if(cachedData) {
+                callback(cachedData);
+            } else {
+                $http.get('/persons').success(function(data){
+                    var result = {
+                        data:data,
+                        category:getCategory(data)
+                    };
+                    cachedData = result;
+                    callback(result);
+                });
+            }
+        }
+
+        function getCategory(data){
+            return _.chain(data).map(function(item){
+                return item.category;
+            }).uniq().value();
+        }
+        this.getAll = getData;
   });

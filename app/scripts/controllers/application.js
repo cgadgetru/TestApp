@@ -11,8 +11,9 @@ angular.module('testAppApp')
   .controller('ApplicationCtrl',['$scope','Persons', function ($scope,Persons) {
     $scope.viewType = 'columns';
 
-    Persons.get().success(function(result){
-        console.log('persons',result);
-        $scope.persons = result;
+    Persons.getAll(function(result){
+        console.log("result",result);
+        $scope.persons = result.data;
+
     })
   }]);

@@ -9,4 +9,5 @@ router.get('/', function(req, res) {
 router.get('/persons', function(req, res) {
     res.send(generateFakePersons(30));
 });
+
 module.exports = router;
