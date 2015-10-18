@@ -23,10 +23,10 @@
     <div class="view-type" ng-switch-when="columns">
         <div class="col-lg-2" ng-repeat="category in categories">
             <div class="panel panel-default">
-                <div class="panel-heading">{{category}}</div>
+                <div class="panel-heading">{{category || "empty"}}</div>
                 <div class="list-group category panel-body">
-                    <a href="#" class="list-group-item" ng-repeat="person in persons | filter: category | filter:user ">
-                        <h4 class="list-group-item-heading">{{person.name}}</h4>
+                    <a href="#" class="list-group-item" ng-repeat="person in persons | filter: {'category':category} | filter:user ">
+                        <h4 class="list-group-item-text">{{person.name}}</h4>
 
                         <p class="list-group-item-text">{{person.email}}</p>
 

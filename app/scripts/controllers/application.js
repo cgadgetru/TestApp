@@ -12,6 +12,7 @@ angular.module('testAppApp')
     $scope.loading = true;
     $scope.viewType = 'columns';
     Persons.getAll(function(result){
+
         $scope.loading = false;
         $scope.persons = result.data;
         $scope.categories = result.categories;
@@ -20,9 +21,10 @@ angular.module('testAppApp')
                 category1:"success",
                 category2:"info",
                 category3:"warning",
-                category4:"danger"
+                'empty':"danger"
             };
             return classes[category];
-        }
+        };
+
     })
   }]);

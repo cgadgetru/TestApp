@@ -15,6 +15,8 @@ angular.module('testAppApp')
                 callback(cachedData);
             } else {
                 $http.get('/persons').success(function(data){
+                    console.log("categories",getCategory(data));
+                    console.log("data",convertData(data));
                     var result = {
                         data:data,
                         categories:getCategory(data)
@@ -28,7 +30,23 @@ angular.module('testAppApp')
         function getCategory(data){
             return _.chain(data).map(function(item){
                 return item.category;
-            }).uniq().value();
+            }).uniq().value().map(function(item){
+                if (item === ''){
+                    return 'empty';
+                }else{
+                    return item;
+                }
+            });
+        }
+        function convertData(data){
+            return _.chain(data).map(function(item){
+                if (item.category === ''){
+                    item.category = 'empty';
+                    return item;
+                }else{
+                    return item;
+                }
+            }).value()
         }
         this.getAll = getData;
   });
