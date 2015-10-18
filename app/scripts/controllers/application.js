@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name testAppApp.controller:ApplicationCtrl
+ * @name testApp.controller:ApplicationCtrl
  * @description
  * # ApplicationCtrl
- * Controller of the testAppApp
+ * Controller of the testApp
  */
-angular.module('testAppApp')
+angular.module('testApp')
   .controller('ApplicationCtrl',['$scope','Persons', function ($scope,Persons) {
     $scope.loading = true;
     $scope.viewType = 'columns';

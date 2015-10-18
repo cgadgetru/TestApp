@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name testAppApp.persons
+ * @name testApp.persons
  * @description
  * # persons
- * Service in the testAppApp.
+ * Service in the testApp.
  */
-angular.module('testAppApp')
+angular.module('testApp')
   .service('Persons', function ($http) {
         var cachedData;
         function getData(callback){

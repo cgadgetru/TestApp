@@ -31,10 +31,10 @@ body,html{
     width: 100%;
     overflow: hidden;
 }
-.left{
+.form__left{
     margin-right: 105px;
 }
-.right{
+.form__right{
     margin-left: -4px;
     float: right;
     width: 105px;

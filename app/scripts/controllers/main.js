@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name testAppApp.controller:MainCtrl
+ * @name testApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the testAppApp
+ * Controller of the testApp
  */
-angular.module('testAppApp')
+angular.module('testApp')
   .controller('MainCtrl', function ($scope,$http) {
 
   });

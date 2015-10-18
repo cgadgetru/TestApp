@@ -1,6 +1,7 @@
 body,html{
     padding: 0;
     margin: 0;
+    direction: rtl;
 }
 
 
@@ -14,14 +15,14 @@ body,html{
     width: 100%;
     position: relative;
     z-index: 2;
-    float: left;
+    float: right;
     margin-bottom: 0;
     box-sizing: border-box;
 }
 .form__submit{
     box-sizing: border-box;
     width: 90px;
-    float: right;
+    float: left;
     display: block;
     white-space: nowrap;
     vertical-align: middle;
@@ -31,11 +32,12 @@ body,html{
     width: 100%;
     overflow: hidden;
 }
-.left{
-    margin-right: 105px;
+.form__left{
+    margin-left: 105px;
 }
-.right{
-    margin-left: -4px;
-    float: right;
+.form__right{
+    margin-right: -4px;
+    float: left;
     width: 105px;
+
 }
