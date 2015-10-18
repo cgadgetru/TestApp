@@ -28,6 +28,10 @@ angular
         templateUrl: 'views/application.html',
         controller: 'ApplicationCtrl'
       })
+      .when('/form', {
+        templateUrl: 'views/form.html',
+        controller: 'FormCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

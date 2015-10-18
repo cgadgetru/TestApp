@@ -18,7 +18,7 @@ angular.module('testAppApp')
                     console.log("categories",getCategory(data));
                     console.log("data",convertData(data));
                     var result = {
-                        data:data,
+                        data:convertData(data),
                         categories:getCategory(data)
                     };
                     cachedData = result;

@@ -1,0 +1,44 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+}
+
+
+.form-container{
+ width: 100%;
+}
+
+.form__text{
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    float: right;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+.form__submit{
+    box-sizing: border-box;
+    width: 90px;
+    float: left;
+    display: block;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.container{
+    width: 100%;
+    overflow: hidden;
+}
+.left{
+    margin-left: 105px;
+    background-color: #4cff7d;
+}
+.right{
+    margin-right: -4px;
+    float: left;
+    width: 105px;
+    background-color: pink;
+}
