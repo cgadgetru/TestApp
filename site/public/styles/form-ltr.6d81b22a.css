@@ -33,11 +33,9 @@ body,html{
 }
 .left{
     margin-right: 105px;
-    background-color: #4cff7d;
 }
 .right{
     margin-left: -4px;
     float: right;
     width: 105px;
-    background-color: pink;
 }

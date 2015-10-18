@@ -10,13 +10,11 @@
 angular.module('testAppApp')
   .service('Persons', function ($http) {
         var cachedData;
-        function getData(callback,error){
+        function getData(callback){
             if(cachedData) {
                 callback(cachedData);
             } else {
                 $http.get('/persons').success(function(data){
-                    console.log("categories",getCategory(data));
-                    console.log("data",convertData(data));
                     var result = {
                         data:convertData(data),
                         categories:getCategory(data)

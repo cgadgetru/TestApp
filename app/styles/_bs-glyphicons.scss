@@ -6,6 +6,7 @@
     list-style: none;
   }
   li{
+    overflow: hidden;
     width: 12.5%;
     font-size: 12px;
     float: left;
@@ -15,6 +16,9 @@
     text-align: center;
     background-color: #f9f9f9;
     border: 1px solid #fff;
+    p{
+      overflow: hidden;
+    }
   }
 }
 .glyphicon{

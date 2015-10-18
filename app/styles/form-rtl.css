@@ -34,11 +34,10 @@ body,html{
 }
 .left{
     margin-left: 105px;
-    background-color: #4cff7d;
 }
 .right{
     margin-right: -4px;
     float: left;
     width: 105px;
-    background-color: pink;
+
 }

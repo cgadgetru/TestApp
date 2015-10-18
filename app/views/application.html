@@ -1,20 +1,21 @@
 <nav class="navbar navbar-default">
 
-    <div class="container-fluid">
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <input type="text" ng-model="user" class="form-control" placeholder="Search">
-            </div>
-        </form>
+    <div class="container">
         <div class="row">
-                <div class="btn-group pull-right switcher">
-                    <button type="button" ng-click="viewType = 'large'" ng-class="(viewType == 'large')?'btn-primary':''" class="btn btn-default"><i
-                            class="fa fa-th-large"></i></button>
-                    <button type="button" ng-click="viewType = 'list'" ng-class="(viewType == 'list')?'btn-primary':''" class="btn btn-default"><i
-                            class="fa fa-list"></i></button>
-                    <button type="button" ng-click="viewType = 'columns'" ng-class="(viewType == 'columns')?'btn-primary':''" class="btn btn-default"><i
-                            class="fa fa-columns"></i></button>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" ng-model="user" class="form-control" placeholder="Search">
                 </div>
+            </form>
+
+            <div class="btn-group pull-right switcher">
+                <button type="button" ng-click="viewType = 'large'" ng-class="(viewType == 'large')?'btn-primary':''" class="btn btn-default"><i
+                        class="fa fa-th-large"></i></button>
+                <button type="button" ng-click="viewType = 'list'" ng-class="(viewType == 'list')?'btn-primary':''" class="btn btn-default"><i
+                        class="fa fa-list"></i></button>
+                <button type="button" ng-click="viewType = 'columns'" ng-class="(viewType == 'columns')?'btn-primary':''" class="btn btn-default"><i
+                        class="fa fa-columns"></i></button>
+            </div>
         </div>
     </div>
 </nav>
@@ -50,10 +51,12 @@
                 <tr>
                     <th>Имя</th>
                     <th>Email</th>
+                    <th>Категория</th>
                 </tr>
                 <tr class="active" ng-class="getClass(person.category)" ng-repeat="person in persons | filter:user">
                     <td>{{person.name}}</td>
                     <td>{{person.email}}</td>
+                    <td>{{person.category}}</td>
                 </tr>
 
             </table>
@@ -67,7 +70,7 @@
         <ul class="bs-glyphicons-list">
 
             <li ng-repeat="person in persons | filter:user">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <img class="avatar" ng-src="{{person.avatar}}" alt="{{person.avatar}}"/>
                 <p>{{person.name}}</p>
                 <p>{{person.email}}</p>
             </li>

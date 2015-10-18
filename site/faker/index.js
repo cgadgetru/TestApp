@@ -3,13 +3,15 @@ var faker = require('faker');
 var randomName = faker.name.findName(); // Rowan Nikolaus
 var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
 var randomCard = faker.helpers.createCard(); // random contact card containing many properties
+console.log('faker',faker.image.avatar());
 var fakePersons = generateFakePersons(30);
 
 function FakePerson(){
     var categories = ['category1','category2','category3',''];
     this.name = faker.name.findName();
     this.email = faker.internet.email();
-    this.category = getRandomCategory(categories)
+    this.category = getRandomCategory(categories);
+    this.avatar = faker.image.avatar();
 }
 
 function getRandomCategory(categories){
